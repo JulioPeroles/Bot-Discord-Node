@@ -20,30 +20,18 @@ client.on("ready", () => { /* esta funcion es un listen*/
 });
 
 client.on("message", msg => {
-    m=msg.content.toLowerCase();
+        m=msg.content.toLowerCase();
         console.log(m);
+        if (m.indexOf("mierda")>-1) {
+          msg.reply("putoo!!!Oye no digas malas palabras");
+        }
+        if (m.indexOf("ola")>-1) {
+          msg.reply("Saludos,¿qué deseas?");     
+          msg.reply("A)Si quieres confirmar sobre una reunión puedes avisarle a @Danielsinsama y yo les haré recordar");
+          msg.reply("B)Si quieres otra cosa puedes hablar con normalidad,tal vez te puedo entender");
+        }
     }
   );
-  /*comentario */
-client.on("message", msg => {
-    m=msg.content.toLowerCase();
-    if (m.indexOf("mierda")>-1) {
-      msg.reply("Oye no digas malas palabras");
-    }
-  });
-  client.on("message", msg => {
-    m=msg.content.toLowerCase();
-    if (m.indexOf("mierda")>-1) {
-      msg.reply("Oye no digas malas palabras");
-    }
-  });
-  client.on("message", msg => {
-    m=msg.content.toLowerCase();
-    if (m.indexOf("ola")>-1) {
-      msg.reply("Saludos,¿qué deseas?");     
-      msg.reply("A)Si quieres confirmar sobre una reunión puedes avisarle a @Danielsinsama y yo les haré recordar");
-      msg.reply("B)Si quieres otra cosa puedes hablar con normalidad,tal vez te puedo entender");
-    }
-  });
+ 
   
 client.login(tk);
